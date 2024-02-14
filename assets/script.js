@@ -56,4 +56,8 @@ const respostasElements = document.querySelectorAll('.respostas');
 
 let indicePerguntaAtual = 0;
 
-function
+function carregarPergunta(){
+    const perguntaAtual = quiz[indicePerguntaAtual];
+    perguntaElement.textContent = perguntaAtual.  
+
+}
