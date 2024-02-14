@@ -19,4 +19,20 @@ const quiz = [
         pergunta: "Em Star Wars, qual é o nome do planeta natal de Han Solo?",
         respostas: ["Tatooine", "Endor", "Coruscant", "Corellia"],
         respostaCorreta: "Corellia"
+    },
+    {
+        pergunta: "Quem é o compositor da trilha sonora de Shrek?",
+        respostas: ["John Williams", "Howard Shore", "Hans Zimmer", "Harry Gregson-Williams"],
+        respostaCorreta: "Harry Gregson-Williams"
+    },
+
+    {
+        pergunta: "No filme Harry Potter, qual é o nome do feitiço usado para abrir portas?",
+        respostas: ["Alohomora", "Expelliarmus", "Accio", "Lumos"],
+        respostaCorreta: "Alohomora"
+    },
+    {
+        pergunta: "Qual personagem de Shrek foi baseado em uma figura histórica real?",
+        respostas: ["Shrek", "Burro", "Lord Farquaad", "Robin Hood"],
+        respostaCorreta: "Robin Hood"
     },]
