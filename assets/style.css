@@ -4,22 +4,35 @@
     padding: 0; 
 }
 
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+}
 
+main{
+    width: 100% !important;
+    height: 100% !important; 
+}
 
-.tela_inicial{
+.tela-inicial{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     transition: all.4s;
+    background-image: url(images/movies.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100% !important;
+    height: 100% !important;
 }
-
-
-body,
-html {
-    height: 100%;
-    margin: 0;
-} 
+ 
 
 .background {
     background-image: url('movies.jpeg');
@@ -61,4 +74,8 @@ html {
         background-image: linear-gradient(to right, #ff7e5f, #feb47b);
         /* Gradiente final para o fim da animação */
     }
+}
+
+.none{
+    display: none;
 }
