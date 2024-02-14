@@ -35,4 +35,15 @@ const quiz = [
         pergunta: "Qual personagem de Shrek foi baseado em uma figura histórica real?",
         respostas: ["Shrek", "Burro", "Lord Farquaad", "Robin Hood"],
         respostaCorreta: "Robin Hood"
-    },]
+    },
+    {
+        pergunta: "Quem é o mestre Jedi que treinou Obi-Wan Kenobi em Star Wars?",
+        respostas: ["Yoda", "Mace Windu", "Qui-Gon Jinn", "Luke Skywalker"],
+        respostaCorreta: "Qui-Gon Jinn"
+    }
+];
+
+const perguntaElement = document.querySelector('.pergunta');
+const respostasElements = document.querySelectorAll('.respostas');
+
+let indicePerguntaAtual = 0;
