@@ -58,6 +58,6 @@ let indicePerguntaAtual = 0;
 
 function carregarPergunta(){
     const perguntaAtual = quiz[indicePerguntaAtual];
-    perguntaElement.textContent = perguntaAtual.  
+    perguntaElement.textContent = perguntaAtual.pergunta;  
 
 }
