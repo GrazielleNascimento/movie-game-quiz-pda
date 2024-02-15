@@ -70,15 +70,24 @@ main{
 @keyframes backgroundAnimation {
     0% {
         background-color: #ff7e5f;
-        /* Defina sua cor inicial aqui */
+        
     }
 
     100% {
         background-image: linear-gradient(to right, #ff7e5f, #feb47b);
-        /* Gradiente final para o fim da animação */
+        
     }
 }
-
+.caixa-perguntas{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.caixa-perguntas .campoRespostas{
+    display: flex;
+    background-color: red;
+}
 .none{
     display: none;
 }
