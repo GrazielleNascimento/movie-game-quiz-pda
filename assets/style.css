@@ -20,31 +20,28 @@
      height: 100% !important;
  }
 
+ .img-inicio {
+     width: 500px;
+     border: 5px solid white;
+     border-radius: 3px;
+
+ }
+
+ .titulo {
+     font-size: 50px;
+     color: white;
+ }
+
  .tela-inicial {
      display: flex;
      flex-direction: column;
      align-items: center;
      justify-content: center;
      transition: all.4s;
-     background-image: url(images/movies.jpeg);
-     background-position: center;
-     background-repeat: no-repeat;
-     background-size: cover;
      width: 100% !important;
      height: 100% !important;
- }
-
-
- .background {
-     background-image: url('movies.jpeg');
-     height: 100%;
-     background-position: center;
-     background-repeat: no-repeat;
-     background-size: cover;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     animation: backgroundAnimation 10s ease-in-out infinite;
+     gap: 25px;
+     background-color: #1F497D;
  }
 
 
@@ -52,7 +49,7 @@
      font-size: 2em;
      padding: 1em 3em;
      border: none;
-     background-image: linear-gradient(to right, #ff7e5f, #feb47b);
+     background-image: linear-gradient(to right, #2e20ef, #57adeb);
      color: white;
      transition: background-color 0.5s ease;
      cursor: pointer;
@@ -63,21 +60,11 @@
  }
 
  .btn-iniciar:hover {
-     /* Gradiente colorido para o estado hover */
-     background-image: linear-gradient(to right, #f35832, #e78439);
+
+     background-image: linear-gradient(to right, #220adb, #531bee);
  }
 
- @keyframes backgroundAnimation {
-     0% {
-         background-color: #ff7e5f;
 
-     }
-
-     100% {
-         background-image: linear-gradient(to right, #ff7e5f, #feb47b);
-
-     }
- }
 
  .caixa-perguntas {
      display: flex;
@@ -130,6 +117,7 @@
      color: white;
      box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.247);
      cursor: pointer;
+     border-radius: 5px;
  }
 
  .respostas:active {
