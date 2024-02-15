@@ -78,6 +78,7 @@ function carregarPergunta() {
 
   perguntaAtual.respostas.forEach((resposta, index) => {
     respostasElements[index].textContent = resposta;
+    respostasElements[index].style.backgroundColor = perguntaAtual.corBotao;
   });
 
   const body = document.body;
@@ -85,9 +86,7 @@ function carregarPergunta() {
 
   const imagemPergunta = document.getElementById("imgPergunta");
   imagemPergunta.src = "assets/images/" + perguntaAtual.imagemRelacionada;
-
-  respostasElements.style.backgroundColor = perguntaAtual.corBotao;
-
+  
   const countElement = document.getElementById("count");
 
   for (let i = 0; i < quiz.length; i++) {
