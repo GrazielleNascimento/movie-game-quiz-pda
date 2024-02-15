@@ -64,7 +64,17 @@ function iniciarQuiz() {
   let startField = document.getElementById("campoInicio");
   startField.classList.add("none");
   quizField.classList.remove("none");
+  nomeUsuario();
   carregarPergunta();
+}
+
+function nomeUsuario() {
+  let nome;
+  do {
+   nome = prompt("Informe seu nome: ");
+    
+  } while (!nome);
+  console.log(nome)
 }
 
 const perguntaElement = document.querySelector(".pergunta");
@@ -86,7 +96,7 @@ function carregarPergunta() {
 
   const imagemPergunta = document.getElementById("imgPergunta");
   imagemPergunta.src = "assets/images/" + perguntaAtual.imagemRelacionada;
-  
+
   const countElement = document.getElementById("count");
 
   for (let i = 0; i < quiz.length; i++) {
