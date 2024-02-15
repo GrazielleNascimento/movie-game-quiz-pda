@@ -85,6 +85,7 @@ main{
     flex-direction: column;
     gap: 15px;
     height: 100%;
+    text-align: center;
 }
 .caixa-perguntas .campoRepostas{
     display: flex;
@@ -94,6 +95,9 @@ main{
 
 .imgPergunta{
     width: 250px;
+}
+.pergunta{
+    font-size: 25px;
 }
 .none{
     display: none;
