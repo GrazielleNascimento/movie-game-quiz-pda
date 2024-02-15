@@ -68,6 +68,7 @@ function carregarPergunta() {
     respostasElements[index].textContent = resposta;
   });
 
+
   const countElement = document.getElementById("count");
   for (let i = 0; i < quiz.length; i++) {
     if (i === indicePerguntaAtual) {
@@ -75,14 +76,19 @@ function carregarPergunta() {
       break;
     }
   }
-}
+};
 
 respostasElements.forEach((respostasElement) => {
   respostasElement.addEventListener("click", () => {
-    if (
-      respostasElement.textContent === quiz[indicePerguntaAtual].respostaCorreta
-    ) {
-      alert("Parabens!!! Resposta Correta");
+    if (respostasElement.textContent === quiz[indicePerguntaAtual].respostaCorreta) {
+      alert("Parabéns!!! Resposta Correta");
+      if(indicePerguntaAtual < quiz.length -1){
+        indicePerguntaAtual++
+        carregarPergunta()
+      }else{
+        alert('Parabéns, você completou o quiz e retornara ao inicio do quiz');
+        indicePerguntaAtual = 0;
+      }
     } else {
       alert("Resposta incorreta, você retornara ao inicio do Quiz");
       indicePerguntaAtual = 0;
@@ -90,3 +96,5 @@ respostasElements.forEach((respostasElement) => {
     }
   });
 });
+
+
