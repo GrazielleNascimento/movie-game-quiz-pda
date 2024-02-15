@@ -121,7 +121,8 @@
  }
 
  .respostas {
-     width: 180px;
+     min-width: 180px;
+     max-width: 100%;
      background-color: #778899;
      padding: 10px;
      text-transform: uppercase;
