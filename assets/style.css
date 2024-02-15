@@ -105,3 +105,17 @@ main{
 .none{
     display: none;
 }
+
+.group{
+    display: flex;
+    flex-direction:column ;
+    gap: 10px;
+}
+
+.respostas{
+   background-color: aqua;
+   padding:10px ;
+   text-transform: uppercase;
+   font-weight: 800;
+   color: white;
+}
