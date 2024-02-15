@@ -113,9 +113,15 @@ main{
 }
 
 .respostas{
+   width: 180px;
    background-color: aqua;
    padding:10px ;
    text-transform: uppercase;
    font-weight: 800;
    color: white;
+   box-shadow:1px 1px 5px 2px rgba(0, 0, 0, 0.247);
+   cursor:pointer;
+}
+.respostas:active{
+    transform: scale(0.96);  
 }
