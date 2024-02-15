@@ -5,21 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movies Game Quiz PDA</title>
     <link rel="stylesheet" href="./assets/style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <main>
-      <section class="tela-inicial" id="campoInicio">
-        <img class="img-inicio" src="assets/images/movies.jpeg" alt="movies">
+      <section class="tela-inicial none"  id="campoInicio">
+        <img class="img-inicio" src="assets/images/movies.jpeg" alt="movies" />
         <h1 class="titulo">Movies Game Quiz</h1>
         <button class="btn-iniciar" onclick="iniciarQuiz()">Começar</button>
-        
-
       </section>
 
       <section class="caixa-perguntas none" id="campoQuiz">
-        <img src="" class="imgPergunta" alt="imagem da pergunta" id="imgPergunta"/>
+        <img
+          src=""
+          class="imgPergunta"
+          alt="imagem da pergunta"
+          id="imgPergunta"
+        />
         <span class="contador" id="count"></span>
-        <h4 class="pergunta"></h4>  
+        <h4 class="pergunta"></h4>
         <ul class="campoRepostas">
           <div class="group">
             <li class="respostas"></li>
@@ -32,7 +39,11 @@
         </ul>
       </section>
 
-    
+      <section class="tela-resultado" id="resultado">
+        <h2>Parabéns Grazi</h2>
+        <p>Você completou o Quiz com sucesso!!!</p>
+        <button class="botao-minigame"><i class="fa-solid fa-gamepad"></i>Mini Game</button>
+      </section>
     </main>
 
     <script src="assets/script.js"></script>
