@@ -4,7 +4,7 @@ const quiz = [
       "Qual é o nome da criatura mágica que é usada para guardar o cofre do Sr. Lestrange em Gringotes, no universo de Harry Potter?",
     respostas: ["Acromântula", "Testrálio", "Hipogrifo", "Dragão Ucraniano"],
     respostaCorreta: "Dragão Ucraniano",
-    imagemRelacionada: "harry-potter.jpeg",
+    imagemRelacionada: "harry-potter.jpg",
   },
 
   {
@@ -12,19 +12,19 @@ const quiz = [
       "No filme Harry Potter, qual é o nome do feitiço usado para abrir portas?",
     respostas: ["Alohomora", "Expelliarmus", "Accio", "Lumos"],
     respostaCorreta: "Alohomora",
-    imagemRelacionada: "harry-potter.jpeg",
+    imagemRelacionada: "harry-potter.jpg",
   },
   {
     pergunta: "Em Star Wars, qual é o nome do planeta natal de Han Solo?",
     respostas: ["Tatooine", "Endor", "Coruscant", "Corellia"],
     respostaCorreta: "Corellia",
-    imagemRelacionada: "Hansolo.jpeg",
+    imagemRelacionada: "hansolo.jpeg",
   },
   {
     pergunta: "Quem é o mestre Jedi que treinou Obi-Wan Kenobi em Star Wars?",
     respostas: ["Yoda", "Mace Windu", "Qui-Gon Jinn", "Luke Skywalker"],
     respostaCorreta: "Qui-Gon Jinn",
-    imagemRelacionada: "Hansolo.jpeg",
+    imagemRelacionada: "hansolo.jpeg",
   },
   {
     pergunta: "Quem é o compositor da trilha sonora de Shrek?",
@@ -35,7 +35,7 @@ const quiz = [
       "Harry Gregson-Williams",
     ],
     respostaCorreta: "Harry Gregson-Williams",
-    imagemRelacionada: "shrek.jpeg",
+    imagemRelacionada: "shrek.jpg",
   },
 
   {
@@ -68,6 +68,8 @@ function carregarPergunta() {
     respostasElements[index].textContent = resposta;
   });
 
+  const imagemPergunta = document.getElementById("imgPergunta");
+  imagemPergunta.src = "assets/images/" + perguntaAtual.imagemRelacionada; 
 
   const countElement = document.getElementById("count");
   for (let i = 0; i < quiz.length; i++) {
