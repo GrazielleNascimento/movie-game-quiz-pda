@@ -58,22 +58,22 @@ const quiz = [
     corBotao: "#2E8B57",
   },
 ];
+let quizField = document.getElementById("campoQuiz");
+let startField = document.getElementById("campoInicio");
 
 function iniciarQuiz() {
-  let quizField = document.getElementById("campoQuiz");
-  let startField = document.getElementById("campoInicio");
   startField.classList.add("none");
   quizField.classList.remove("none");
   nomeUsuario();
   carregarPergunta();
 }
 
-function nomeUsuario() {
-  let nome;
+let nome;
+function nomeUsuario() { 
   do {
     nome = prompt("Informe seu nome: ");
   } while (!nome);
-  console.log(nome);
+
 }
 
 const perguntaElement = document.querySelector(".pergunta");
@@ -108,6 +108,11 @@ function carregarPergunta() {
   }
 }
 
+function parabens(){
+  const tituloParabens = document.getElementById('tituloParabens');
+  tituloParabens.innerText = `Parabéns ${nome}`
+}
+
 respostasElements.forEach((respostasElement) => {
   respostasElement.addEventListener("click", () => {
     if (
@@ -118,8 +123,10 @@ respostasElements.forEach((respostasElement) => {
         indicePerguntaAtual++;
         carregarPergunta();
       } else {
-        campoInicio.classList.add("none");
+        quizField.classList.add("none");
         campoResultado.classList.remove("none");
+        parabens()
+        indicePerguntaAtual = 0;
       }
     } else {
       alert("Resposta incorreta, você retornara ao inicio do Quiz");
@@ -128,3 +135,7 @@ respostasElements.forEach((respostasElement) => {
     }
   });
 });
+
+
+
+
