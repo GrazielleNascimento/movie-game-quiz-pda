@@ -83,10 +83,17 @@ main{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 15px;
+    height: 100%;
 }
-.caixa-perguntas .campoRespostas{
+.caixa-perguntas .campoRepostas{
     display: flex;
-    background-color: red;
+    gap: 40px;
+    list-style: none;
+}
+
+.imgPergunta{
+    width: 250px;
 }
 .none{
     display: none;
