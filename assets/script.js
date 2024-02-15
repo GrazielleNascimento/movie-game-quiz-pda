@@ -53,7 +53,7 @@ const quiz = [
       "Qual personagem de Shrek foi baseado em uma figura histórica real?",
     respostas: ["Shrek", "Burro", "Lord Farquaad", "Robin Hood"],
     respostaCorreta: "Robin Hood",
-    imagemRelacionada: "shrek.jpeg",
+    imagemRelacionada: "shrek.jpg",
     corFundo: "#cee5c3",
     corBotao: "#2E8B57",
   },
@@ -71,14 +71,15 @@ function iniciarQuiz() {
 function nomeUsuario() {
   let nome;
   do {
-   nome = prompt("Informe seu nome: ");
-    
+    nome = prompt("Informe seu nome: ");
   } while (!nome);
-  console.log(nome)
+  console.log(nome);
 }
 
 const perguntaElement = document.querySelector(".pergunta");
 const respostasElements = document.querySelectorAll(".respostas");
+
+const campoResultado = document.getElementById("resultado");
 
 let indicePerguntaAtual = 0;
 
@@ -117,8 +118,8 @@ respostasElements.forEach((respostasElement) => {
         indicePerguntaAtual++;
         carregarPergunta();
       } else {
-        alert("Parabéns, você completou o quiz e retornara ao inicio do quiz");
-        indicePerguntaAtual = 0;
+        campoInicio.classList.add("none");
+        campoResultado.classList.remove("none");
       }
     } else {
       alert("Resposta incorreta, você retornara ao inicio do Quiz");
