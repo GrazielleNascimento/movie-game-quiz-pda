@@ -5,7 +5,8 @@ const quiz = [
     respostas: ["Acromântula", "Testrálio", "Hipogrifo", "Dragão Ucraniano"],
     respostaCorreta: "Dragão Ucraniano",
     imagemRelacionada: "harry-potter.jpg",
-    corFundo: "#DEBF7E"
+    corFundo: "#DEBF7E",
+    corBotao: "#77510B",
   },
 
   {
@@ -14,36 +15,47 @@ const quiz = [
     respostas: ["Alohomora", "Expelliarmus", "Accio", "Lumos"],
     respostaCorreta: "Alohomora",
     imagemRelacionada: "harry-potter.jpg",
-    corFundo: "#DEBF7E"
+    corFundo: "#DEBF7E",
+    corBotao: "#77510B",
   },
   {
     pergunta: "Em Star Wars, qual é o nome do planeta natal de Han Solo?",
     respostas: ["Tatooine", "Endor", "Coruscant", "Corellia"],
     respostaCorreta: "Corellia",
     imagemRelacionada: "hansolo.jpeg",
-    corFundo: "#333a3f"
+    corFundo: "#333a3f",
+    corBotao: "#1F497D",
   },
   {
     pergunta: "Quem é o mestre Jedi que treinou Obi-Wan Kenobi em Star Wars?",
     respostas: ["Yoda", "Mace Windu", "Qui-Gon Jinn", "Luke Skywalker"],
     respostaCorreta: "Qui-Gon Jinn",
     imagemRelacionada: "hansolo.jpeg",
-    corFundo: "#333a3f"
+    corFundo: "#333a3f",
+    corBotao: "#1F497D",
   },
   {
     pergunta: "Quem é o compositor da trilha sonora de Shrek?",
-    respostas: ["John Williams", "Howard Shore", "Hans Zimmer", "Harry Gregson-Williams"],
+    respostas: [
+      "John Williams",
+      "Howard Shore",
+      "Hans Zimmer",
+      "Harry Gregson-Williams",
+    ],
     respostaCorreta: "Harry Gregson-Williams",
     imagemRelacionada: "shrek.jpg",
-    corFundo: "#cee5c3"
+    corFundo: "#cee5c3",
+    corBotao: "#2E8B57",
   },
 
   {
-    pergunta: "Qual personagem de Shrek foi baseado em uma figura histórica real?",
+    pergunta:
+      "Qual personagem de Shrek foi baseado em uma figura histórica real?",
     respostas: ["Shrek", "Burro", "Lord Farquaad", "Robin Hood"],
     respostaCorreta: "Robin Hood",
     imagemRelacionada: "shrek.jpeg",
-    corFundo: "#cee5c3"
+    corFundo: "#cee5c3",
+    corBotao: "#2E8B57",
   },
 ];
 
@@ -70,28 +82,33 @@ function carregarPergunta() {
 
   const body = document.body;
   body.style.backgroundColor = perguntaAtual.corFundo;
-  
+
   const imagemPergunta = document.getElementById("imgPergunta");
-  imagemPergunta.src = "assets/images/" + perguntaAtual.imagemRelacionada; 
+  imagemPergunta.src = "assets/images/" + perguntaAtual.imagemRelacionada;
+
+  respostasElements.style.backgroundColor = perguntaAtual.corBotao;
 
   const countElement = document.getElementById("count");
+
   for (let i = 0; i < quiz.length; i++) {
     if (i === indicePerguntaAtual) {
       countElement.textContent = `${i + 1}/6`;
       break;
     }
   }
-};
+}
 
 respostasElements.forEach((respostasElement) => {
   respostasElement.addEventListener("click", () => {
-    if (respostasElement.textContent === quiz[indicePerguntaAtual].respostaCorreta) {
+    if (
+      respostasElement.textContent === quiz[indicePerguntaAtual].respostaCorreta
+    ) {
       alert("Parabéns!!! Resposta Correta");
-      if(indicePerguntaAtual < quiz.length -1){
-        indicePerguntaAtual++
-        carregarPergunta()
-      }else{
-        alert('Parabéns, você completou o quiz e retornara ao inicio do quiz');
+      if (indicePerguntaAtual < quiz.length - 1) {
+        indicePerguntaAtual++;
+        carregarPergunta();
+      } else {
+        alert("Parabéns, você completou o quiz e retornara ao inicio do quiz");
         indicePerguntaAtual = 0;
       }
     } else {
@@ -101,5 +118,3 @@ respostasElements.forEach((respostasElement) => {
     }
   });
 });
-
-
