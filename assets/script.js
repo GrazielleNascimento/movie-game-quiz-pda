@@ -60,4 +60,15 @@ function carregarPergunta(){
     const perguntaAtual = quiz[indicePerguntaAtual];
     perguntaElement.textContent = perguntaAtual.pergunta;  
 
+    perguntaAtual.respostas.forEach((resposta,index) => {
+        respostasElements[index].textContent = resposta;
+    });
+
+    const countElement = document.getElementById('count');
+    for(let i = 0; i < quiz.length; i++){
+        if(i === indicePerguntaAtual){
+            countElement.textContent = `${i + 1}/6`;
+            break;
+        }
+    }
 }
