@@ -64,6 +64,7 @@ let startField = document.getElementById("campoInicio");
 function iniciarQuiz() {
   startField.classList.add("none");
   quizField.classList.remove("none");
+  campoResultado.classList.add("none")
   nomeUsuario();
   carregarPergunta();
 }
@@ -112,6 +113,7 @@ function parabens(){
   const tituloParabens = document.getElementById('tituloParabens');
   tituloParabens.innerText = `Parabéns ${nome}`
 }
+
 
 respostasElements.forEach((respostasElement) => {
   respostasElement.addEventListener("click", () => {
