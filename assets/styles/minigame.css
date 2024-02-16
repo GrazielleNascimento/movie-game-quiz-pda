@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -16,38 +16,39 @@ body{
     font-family: "Poppins", sans-serif;
 }
 
-.titulo{
+.titulo {
     text-align: center;
     color: white;
     font-size: 30px;
 }
-.campoImg img{
+
+.campoImg img {
     width: 350px;
     max-height: 400px;
     border: 5px solid white;
     border-radius: 3px;
 }
 
-.btn{
+.btn {
     margin-top: 30px;
-     border: none;
-     outline: none;
-     padding: 10px;
-     border-radius: 5px;
-     cursor: pointer;
-     font-size: 20px;
-     text-transform: uppercase;
-     display: flex;
-     gap: 5px;
-     justify-content: center;
-     align-items: center;
-     background-color: #0d234b;
-     color: #fff;
-     font-weight: 800;
-     box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.204);
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    text-transform: uppercase;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    background-color: #0d234b;
+    color: #fff;
+    font-weight: 800;
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.204);
 }
 
-.btn-voltar{
+.btn-voltar {
     position: absolute;
     display: flex;
     align-items: center;
@@ -65,12 +66,12 @@ body{
     font-size: 20px;
     cursor: pointer;
     margin-top: 50px;
-    text-transform: uppercase;    
+    text-transform: uppercase;
     box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.205);
     text-decoration: none;
 }
 
-.textoPersonagem{
+.textoPersonagem {
     color: white;
     text-align: center;
     margin-top: 30px;

@@ -1,24 +1,27 @@
-@media screen and (max-width:720px){
-    .img-inicio{
+@media screen and (max-width:720px) {
+    .img-inicio {
         width: 350px !important;
     }
 }
 
-@media screen and (max-width:480px){
-    .titulo{
+@media screen and (max-width:480px) {
+    .titulo {
         font-size: 40px;
     }
-    .btn-inciar{
+
+    .btn-inciar {
         font-size: 10px !important;
     }
-    .campoRepostas{
+
+    .campoRepostas {
         flex-direction: column;
         gap: 20px !important;
         width: 90%;
         margin-top: 20px;
     }
-    .campoRepostas .group{
+
+    .campoRepostas .group {
         gap: 20px !important;
     }
-    
+
 }
