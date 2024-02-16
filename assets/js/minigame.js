@@ -8,7 +8,7 @@ botao.addEventListener("click", function () {
     document.getElementById("imagemAleatoria").src = "assets/images/" + imagemSelecionada;
     document.getElementById("nomeImagem").innerText = nomeImagem;
 
-    botao.innerText = 'Tentar novamente';
+    botao.innerText = 'Descobrir novamente';
 
     let personagemInfo = document.getElementById('info');
     let personagemDesc = document.getElementById('desc');
