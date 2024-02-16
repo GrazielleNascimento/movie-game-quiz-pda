@@ -1,0 +1,5 @@
+@media screen and (max-width:480px){
+    .textoPersonagem{
+        max-width: 95% !important;
+    }
+}
